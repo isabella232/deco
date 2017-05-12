@@ -94,8 +94,50 @@
     <section class="whatsNew main-content">
         <div class="release-notes">
             <div class="release">
+                <div class="date">05/12/2017</div>
+                <h2>Version 0.8.13</h2>
+
+                <h3>New</h3>
+                <ul>
+                        <li>Storage Explorer Troubleshooting <a href="https://support.microsoft.com/en-us/help/4021389/storage-explorer-troubleshooting-guide">Guide</a></li>
+                        <li><a href="https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-manage-with-storage-explorer">Instructions</a> on connecting to an Azure Stack subscription</li>
+                </ul>    
+                
+                <h3>Fixes</h3>
+                <ul>
+                    <li>Fixed: File upload had a high chance of causing an out of memory error</li>
+                    <li>Fixed: You can now sign in with PIN/Smartcard</li>
+                    <li>Fixed: Open in Portal now works with Azure China, Azure Germany, Azure US Government, and Azure Stack</li>
+                    <li>Fixed: While uploading a folder to a blob container, an "Illegal operation" error would sometimes occur</li>
+                    <li>Fixed: Select all was disabled while managing snapshots</li>
+                    <li>Fixed: The metadata of the base blob might get overwritten after viewing the properties of its snapshots</li>
+                </ul>
+
+                <h3>Known Issues</h3>
+                <ul>
+                    <li>If you choose the wrong PIN/Smartcard certificate then you will need to restart in order to have Storage Explorer forget the decision</li>
+                    <li>While zoomed in or out, the zoom level may momentarily reset to the default level</li>
+                    <li>Having more than 3 groups of blobs or files uploading at the same time may cause errors</li>
+                    <li>The account settings panel may show that you need to reenter credentials in order to filter subscriptions</li>
+                    <li>Renaming blobs (individually or inside a renamed blob container) does not preserve snapshots. All other properties and metadata for blobs, files and entities are preserved during a rename.</li>
+                    <li>Although Azure Stack doesn't currently support Files Shares, a File Shares node still appears under an attached Azure Stack storage account.
+                    <li>Ubuntu 14.04 install needs gcc version updated or upgraded – steps to upgrade are below:</li>
+                        <ul>
+                            <li>sudo add-apt-repository ppa:ubuntu-toolchain-r/test</li>
+                            <li>sudo apt-get update</li>
+                            <li>sudo apt-get upgrade</li>
+                            <li>sudo apt-get dist-upgrade</li>
+                        </ul>
+                 </ul>
+            </div>
+        </div>
+    </section>
+
+  <section class="main-content">
+        <div class="release-notes">
+            <div class="release">
                 <div class="date">04/07/2017</div>
-                <h2>Version 0.8.12 </h2>
+                <h2>Version 0.8.12 / 0.8.11 / 0.8.10</h2>
 
                 <h3>New</h3>
 
@@ -142,6 +184,9 @@
             </div>
         </div>
     </section>
+
+
+  <div class="row-divider"> </div>
 
   <section class="main-content">
         <div class="release-notes">

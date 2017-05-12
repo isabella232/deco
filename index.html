@@ -100,42 +100,34 @@
 
     <section class="whatsNew main-content">
         <h1 class="whatsNew">What's New</h1>
-        <div class="date" align="center">04/07/2017</div>
-        <h2 class="whatsNew">Version 0.8.12</h2>
+        <div class="date" align="center">05/12/2017</div>
+        <h2 class="whatsNew">Version 0.8.13</h2>
       
         <ul>
             <li>New
                 <ul>
-                    <li>Storage Explorer will now automatically close when you install an update from the update notification</li>
-                    <li>In-place quick access provides an enhanced experience for working with your frequently accessed resources</li>
-                    <li>In the Blob Container editor, you can now see which virtual machine a leased blob belongs to</li>
-                    <li>You can now collapse the left side panel</li>
-                    <li>Discovery now runs at the same time as download</li>
-                    <li>Use Statistics in the Blob Container, File Share, and Table editors to see the size of your resource or selection</li>
-                    <li>You can now sign-in to Azure Active Directory (AAD) based Azure Stack accounts. <!--See instructions <a href="https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-manage-with-storage-explorer">here</a>--></li>
-                    <li>You can now upload archive files over 32MB to Premium storage accounts</li>
-                    <li>Improved accessibility support</li>
-                    <li>You can now add trusted Base-64 encoded X.509 SSL certificates by going to Edit -> SSL Certificates -> Import Certificates</li>
-               </ul>
+                    <li>Storage Explorer Troubleshooting <a href="https://support.microsoft.com/en-us/help/4021389/storage-explorer-troubleshooting-guide">Guide</a></li>
+                    <li><a href="https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-manage-with-storage-explorer">Instructions</a> on connecting to an Azure Stack subscription</li>
+                </ul>    
             </li>
 
-            <li>Fixes
+            <li>Bug Fixes
                 <ul>
-                    <li>Fixed: after refreshing an account’s credentials, the tree view would sometimes not automatically refresh</li>
-                    <li>Fixed: generating a SAS for emulator queues and tables would result in an invalid URL</li>
-                    <li>Fixed: premium storage accounts can now be expanded while a proxy is enabled</li>
-                    <li>Fixed: the apply button on the accounts management page would not work if you had 1 or 0 accounts selected</li>
-                    <li>Fixed: uploading blobs that require conflict resolutions may fail - fixed in 0.8.11 </li>
-                    <li>Fixed: sending feedback was broken in 0.8.11 - fixed in 0.8.12 </li>
-               </ul>
+                    <li>Fixed: File upload had a high chance of causing an out of memory error</li>
+                    <li>Fixed: You can now sign in with PIN/Smartcard</li>
+                    <li>Fixed: Open in Portal now works with Azure China, Azure Germany, Azure US Government, and Azure Stack</li>
+                    <li>Fixed: While uploading a folder to a blob container, an "Illegal operation" error would sometimes occur</li>
+                    <li>Fixed: Select all was disabled while managing snapshots</li>
+                    <li>Fixed: The metadata of the base blob might get overwritten after viewing the properties of its snapshots</li> 
+                </ul>
             </li>
 
             <li>Known Issues
                 <ul>
-                    <li>After upgrading to 0.8.10, you will need to refresh all of your credentials.</li>
-                    <li>While zoomed in or out, the zoom level may momentarily reset to the default level.</li>
-                    <li>Having more than 3 groups of blobs or files uploading at the same time may cause errors.</li>
-                    <li>The account settings panel may show that you need to reenter credentials in order to filter subscriptions.</li>
+                    <li>If you choose the wrong PIN/Smartcard certificate then you will need to restart in order to have Storage Explorer forget the decision</li>
+                    <li>While zoomed in or out, the zoom level may momentarily reset to the default level</li>
+                    <li>Having more than 3 groups of blobs or files uploading at the same time may cause errors</li>
+                    <li>The account settings panel may show that you need to reenter credentials in order to filter subscriptions</li>
                     <li>Renaming blobs (individually or inside a renamed blob container) does not preserve snapshots. All other properties and metadata for blobs, files and entities are preserved during a rename.</li>
                     <li>Although Azure Stack doesn't currently support Files Shares, a File Shares node still appears under an attached Azure Stack storage account.
                     <li>Ubuntu 14.04 install needs gcc version updated or upgraded – steps to upgrade are below:</li>
