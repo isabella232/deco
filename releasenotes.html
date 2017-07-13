@@ -99,7 +99,7 @@
 
                 <h3>New</h3>
                 <ul>
-                    <li>Migrated blob download and blob upload to a new job queue worker paradigm.</li>
+                    <li>Improved the performance of blob upload and blob download.</li>
                     <li>Improved the conflicting files experience for blob upload and blob download.</li>
                     <li>Improved displaying of errors in the Activity Log during blob upload and blob download.</li>
                     <li>Increased the maximum size of blob uploads and downloads to 8TB for Page Blobs and ~4.7TB for Block Blobs.</li>
@@ -107,8 +107,8 @@
 
                 <h3>Known Issues</h3>
                 <ul>
-                    <li>After clicking "Cancel" on a task, it may take a while for that task to cancel. This is a limitation
-                        of the Azure Storage Node library.</li>
+                    <li>After clicking "Cancel" on a task, it may take a while for that task to cancel. This is a
+                        <a href="https://github.com/Azure/azure-storage-node/issues/317">limitation of the Azure Storage Node library</a>.</li>
                     <li>After completing a blob upload, the tab which initiated the upload is refreshed. This is a change from
                         previous behavior, and will also cause you to be taken back to the root of the container you are
                         in.
